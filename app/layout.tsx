@@ -13,9 +13,14 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Rally/Court | Badminton, elevated",
+  title: "ZC Badminton Store | Badminton Accessories & Equipment",
   description:
     "Performance badminton equipment for players who stay in the rally.",
+  icons: {
+    icon: "/icon.jpg",
+    shortcut: "/icon.jpg",
+    apple: "/icon.jpg",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -51,10 +51,12 @@ export function HeroSection() {
           Badminton equipment for players who read the game one shot ahead.
         </p>
         <Link
-          className="group inline-flex items-center gap-5 rounded-full border border-[#d8f36a]/60 bg-[#d8f36a]/10 py-2 pl-5 pr-2 text-[11px] font-bold uppercase tracking-[0.08em] text-[#d8f36a] shadow-[0_0_30px_rgba(216,243,106,0.08)] backdrop-blur-md transition hover:border-[#d8f36a] hover:bg-[#d8f36a] hover:text-black"
+          className="group inline-flex items-center gap-5 rounded-full border border-[#d8f36a]/60 bg-[#d8f36a]/10 py-2 pl-5 pr-2 text-[11px] font-bold uppercase tracking-[0.08em] text-[#d8f36a] shadow-[0_0_30px_rgba(216,243,106,0.08)] backdrop-blur-md transition hover:border-[#d8f36a] hover:bg-[#d8f36a] hover:text-[#000000]"
           href="/products"
         >
-          Shop the collection
+          <span className="transition-colors group-hover:text-[#000000]">
+            Shop the collection
+          </span>
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#d8f36a] text-lg text-[#12170d] transition group-hover:bg-[#12170d] group-hover:text-[#d8f36a]">
             ↗
           </span>

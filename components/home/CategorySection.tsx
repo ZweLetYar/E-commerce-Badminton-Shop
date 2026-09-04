@@ -1,5 +1,43 @@
 import Link from "next/link";
-import { CategoryCard } from "./CategoryCard";
+import {
+  bags,
+  clothings,
+  grips,
+  rackets,
+  shoes,
+  shuttlecocks,
+  socks,
+  strings,
+  towels,
+  wristbands,
+} from "../../data";
+import type { Product } from "../../data/types";
+import { ProductCard } from "./ProductCard";
+
+const categoryRows: {
+  name: string;
+  href: string;
+  products: Product[];
+}[] = [
+  { name: "Rackets", href: "/rackets", products: rackets },
+  { name: "Shoes", href: "/shoes", products: shoes },
+  { name: "Clothings", href: "/clothings", products: clothings },
+  { name: "Grips", href: "/accessories/grips", products: grips },
+  { name: "Bags", href: "/accessories/bags", products: bags },
+  { name: "Strings", href: "/accessories/strings", products: strings },
+  { name: "Socks", href: "/accessories/socks", products: socks },
+  {
+    name: "Shuttlecocks",
+    href: "/accessories/shuttlecocks",
+    products: shuttlecocks,
+  },
+  { name: "Towels", href: "/accessories/towels", products: towels },
+  {
+    name: "Wristbands",
+    href: "/accessories/wristbands",
+    products: wristbands,
+  },
+];
 
 export function CategorySection() {
   return (
@@ -24,25 +62,27 @@ export function CategorySection() {
           View all equipment <span className="ml-5 text-lg">→</span>
         </Link>
       </div>
-      <div className="grid gap-4 md:grid-cols-[1.3fr_1fr_1fr]">
-        <CategoryCard
-          href="/products"
-          title="Rackets"
-          detail="Light. Fast. Exact."
-          letter="R"
-        />
-        <CategoryCard
-          href="/categories"
-          title="Matchwear"
-          detail="Move without limits."
-          letter="M"
-        />
-        <CategoryCard
-          href="/categories"
-          title="Accessories"
-          detail="Every detail counts."
-          letter="A"
-        />
+      <div className="space-y-20">
+        {categoryRows.map((category) => (
+          <div key={category.name}>
+            <div className="mb-6 flex items-end justify-between gap-4">
+              <h3 className="font-display text-3xl tracking-[-.04em] text-white">
+                {category.name}
+              </h3>
+              <Link
+                className="border-b border-[#d8f36a]/60 pb-1 text-[10px] uppercase tracking-[.12em] text-[#d8f36a] transition hover:border-[#d8f36a]"
+                href={category.href}
+              >
+                View all <span className="ml-2 text-sm">→</span>
+              </Link>
+            </div>
+            <div className="grid gap-5 md:grid-cols-3">
+              {category.products.slice(0, 3).map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
