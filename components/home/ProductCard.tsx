@@ -17,12 +17,12 @@ export function ProductCard({ product }: ProductCardProps) {
   const isLowStock = product.stock > 0 && product.stock <= 5;
 
   return (
-    <article className="group overflow-hidden rounded-2xl border border-[#d9dfd6] bg-white shadow-lg shadow-[#2c4130]/[0.05] transition duration-300 hover:-translate-y-1 hover:border-[#b6d63f] hover:shadow-xl hover:shadow-[#2c4130]/[0.1]">
+    <article className="group overflow-hidden rounded-xl border border-[#d9dfd6] bg-white shadow-md shadow-[#2c4130]/[0.05] transition duration-300 hover:-translate-y-1 hover:border-[#b6d63f] hover:shadow-xl hover:shadow-[#2c4130]/[0.1] sm:rounded-2xl">
       <Link
         href={`/products/${product.id}`}
         aria-label={`View ${product.name}`}
       >
-        <div className="relative aspect-[1.4] overflow-hidden bg-[#e4ebe0] sm:aspect-[1.5]">
+        <div className="relative aspect-[1.3] overflow-hidden bg-[#e4ebe0] sm:aspect-[1.5]">
           <Image
             src={product.image}
             alt={product.name}
@@ -42,7 +42,7 @@ export function ProductCard({ product }: ProductCardProps) {
               event.preventDefault();
               setIsSaved((current) => !current);
             }}
-            className={`absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border text-lg backdrop-blur-md transition sm:right-4 sm:top-4 ${
+            className={`absolute right-2.5 top-2.5 flex h-8 w-8 items-center justify-center rounded-full border text-base backdrop-blur-md transition sm:right-4 sm:top-4 sm:h-9 sm:w-9 sm:text-lg ${
               isSaved
                 ? "border-[#b6d63f] bg-[#dce8c4] text-[#536b18]"
                 : "border-white/70 bg-[#18201b]/55 text-white hover:border-[#b6d63f] hover:bg-[#dce8c4] hover:text-[#536b18]"
@@ -52,24 +52,24 @@ export function ProductCard({ product }: ProductCardProps) {
           >
             {isSaved ? "♥" : "♡"}
           </button>
-          <span className="absolute bottom-3 left-3 rounded-full bg-[#18201b]/75 px-2.5 py-1.5 text-[10px] font-bold text-white backdrop-blur-md sm:bottom-4 sm:left-4">
+          <span className="absolute bottom-2.5 left-2.5 rounded-full bg-[#18201b]/75 px-2 py-1 text-[9px] font-bold text-white backdrop-blur-md sm:bottom-4 sm:left-4 sm:px-2.5 sm:py-1.5 sm:text-[10px]">
             ★ {product.rating.toFixed(1)}
           </span>
-          <span className="absolute bottom-3 right-3 text-[9px] font-bold uppercase tracking-[.1em] text-white/85 sm:bottom-4 sm:right-4">
+          <span className="absolute bottom-2.5 right-2.5 text-[8px] font-bold uppercase tracking-[.08em] text-white/85 sm:bottom-4 sm:right-4 sm:text-[9px] sm:tracking-[.1em]">
             {product.stock > 0 ? "Available" : "Sold out"}
           </span>
         </div>
       </Link>
-      <div className="p-3 sm:p-4">
+      <div className="p-2.5 sm:p-4">
         <Link href={`/products/${product.id}`}>
           <p className="text-[9px] font-bold uppercase tracking-[.14em] text-[#6d891d] sm:text-[10px]">
             {product.category}
           </p>
-          <div className="mt-1.5 flex items-start justify-between gap-2">
-            <h3 className="font-display text-base leading-tight tracking-[-.03em] text-[#18201b] sm:text-xl">
+          <div className="mt-1.5 flex items-start justify-between gap-1.5">
+            <h3 className="min-h-9 font-display text-sm leading-tight tracking-[-.03em] text-[#18201b] sm:min-h-0 sm:text-xl">
               {product.name}
             </h3>
-            <span className="text-base text-[#6d891d] transition-transform duration-300 group-hover:translate-x-1 sm:text-lg">
+            <span className="text-sm text-[#6d891d] transition-transform duration-300 group-hover:translate-x-1 sm:text-lg">
               ↗
             </span>
           </div>
@@ -77,16 +77,16 @@ export function ProductCard({ product }: ProductCardProps) {
             {product.description}
           </p> */}
         </Link>
-        <div className="mt-3 flex items-end justify-between gap-2 border-t border-[#d9dfd6] pt-3">
+        <div className="mt-2.5 flex items-end justify-between gap-1.5 border-t border-[#d9dfd6] pt-2.5 sm:mt-3 sm:gap-2 sm:pt-3">
           <div>
-            <span className="font-display text-base text-[#18201b] sm:text-lg">
+            <span className="font-display text-sm text-[#18201b] sm:text-lg">
               {priceFormatter.format(product.price)}
             </span>
             <span className="ml-1 text-[8px] font-bold uppercase tracking-[.08em] text-[#87938a]">
               {product.currency}
             </span>
             <p
-              className={`mt-1 text-[9px] font-bold uppercase tracking-[.08em] ${isLowStock ? "text-[#b35c22]" : "text-[#87938a]"}`}
+              className={`mt-1 text-[8px] font-bold uppercase tracking-[.06em] ${isLowStock ? "text-[#b35c22]" : "text-[#87938a]"}`}
             >
               {product.stock === 0
                 ? "Unavailable"
@@ -99,7 +99,7 @@ export function ProductCard({ product }: ProductCardProps) {
             type="button"
             disabled={product.stock === 0}
             onClick={() => setIsAdded(true)}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-[#18201b] text-lg text-white transition hover:bg-[#536b18] disabled:cursor-not-allowed disabled:bg-[#cbd6c5]"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#18201b] text-base text-white transition hover:bg-[#536b18] disabled:cursor-not-allowed disabled:bg-[#cbd6c5] sm:h-10 sm:w-10 sm:text-lg"
             aria-label={
               isAdded
                 ? `${product.name} added to cart`

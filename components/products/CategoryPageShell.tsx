@@ -20,7 +20,7 @@ export function CategoryPageShell({
   backLabel,
 }: CategoryPageShellProps) {
   return (
-    <main className="mx-auto max-w-[1280px] px-6 py-20 md:px-12 md:py-28">
+    <main className="mx-auto max-w-[1280px] px-6 py-5 md:px-12 md:py-10">
       {backHref && (
         <Link
           className="text-xs uppercase tracking-[.14em] text-[#87938a] transition hover:text-[#6d891d]"
@@ -29,7 +29,7 @@ export function CategoryPageShell({
           ← {backLabel ?? "Back"}
         </Link>
       )}
-      <div className={backHref ? "mt-14" : ""}>
+      <div className={backHref ? "mt-5" : ""}>
         <p className="mb-6 text-[10px] font-bold uppercase tracking-[.2em] text-[#6d891d]">
           {eyebrow}
         </p>

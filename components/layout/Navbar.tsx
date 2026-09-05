@@ -20,7 +20,7 @@ export function Navbar() {
         5% discount on orders over 200,000MMK <span className="px-2">·</span>{" "}
         Built for your next match
       </div>
-      <header className="mx-auto flex max-w-[1440px] items-center justify-between border-b border-[#d9dfd6] bg-[#f6f7f2]/90 px-6 py-5 backdrop-blur-xl md:px-12">
+      <header className="mx-auto flex max-w-[1440px] items-center justify-between border-b border-[#d9dfd6] bg-[#f6f7f2]/90 px-6 py-2 backdrop-blur-xl md:px-12">
         <Link
           className="flex items-center rounded-lg bg-white p-1 transition hover:opacity-90"
           href="/"
@@ -155,21 +155,21 @@ export function Navbar() {
           </form>
 
           <Link
-            className="rounded-lg px-2 py-2 text-xl transition-colors duration-200 hover:bg-[#dce8c4] hover:text-[#536b18]"
+            className="hidden rounded-lg px-2 py-2 text-xl transition-colors duration-200 hover:bg-[#dce8c4] hover:text-[#536b18] md:block"
             href="/wishlist"
             aria-label="Wishlist"
           >
             ♡
           </Link>
           <Link
-            className="rounded-lg px-2 py-2 text-xl transition-colors duration-200 hover:bg-[#dce8c4] hover:text-[#536b18]"
+            className="hidden rounded-lg px-2 py-2 text-xl transition-colors duration-200 hover:bg-[#dce8c4] hover:text-[#536b18] md:block"
             href="/login"
             aria-label="Account"
           >
             👤
           </Link>
           <Link
-            className="rounded-lg border-l border-[#d9dfd6] px-2 py-2 text-xl transition-colors duration-200 hover:bg-[#dce8c4] hover:text-[#536b18] sm:pl-5"
+            className="hidden rounded-lg border-l border-[#d9dfd6] px-2 py-2 text-xl transition-colors duration-200 hover:bg-[#dce8c4] hover:text-[#536b18] sm:pl-5 md:block"
             href="/cart"
             aria-label="Shopping Cart"
           >
@@ -223,6 +223,81 @@ export function Navbar() {
             <Link className={navLinkClass} href="/shop" onClick={closeMenu}>
               Shop
             </Link>
+            <div className="col-span-full mt-2 border-t border-[#d9dfd6] pt-3 text-[9px] font-bold uppercase tracking-[0.14em] text-[#87938a]">
+              Shop categories
+            </div>
+            <Link className={navLinkClass} href="/rackets" onClick={closeMenu}>
+              Rackets
+            </Link>
+            <Link className={navLinkClass} href="/shoes" onClick={closeMenu}>
+              Shoes
+            </Link>
+            <Link
+              className={navLinkClass}
+              href="/clothings"
+              onClick={closeMenu}
+            >
+              Clothing
+            </Link>
+            <Link
+              className={navLinkClass}
+              href="/accessories"
+              onClick={closeMenu}
+            >
+              All Accessories
+            </Link>
+            <div className="col-span-full mt-2 border-t border-[#d9dfd6] pt-3 text-[9px] font-bold uppercase tracking-[0.14em] text-[#87938a]">
+              Accessories
+            </div>
+            <Link
+              className={navLinkClass}
+              href="/accessories/grips"
+              onClick={closeMenu}
+            >
+              Grips
+            </Link>
+            <Link
+              className={navLinkClass}
+              href="/accessories/bags"
+              onClick={closeMenu}
+            >
+              Bags
+            </Link>
+            <Link
+              className={navLinkClass}
+              href="/accessories/strings"
+              onClick={closeMenu}
+            >
+              Strings
+            </Link>
+            <Link
+              className={navLinkClass}
+              href="/accessories/socks"
+              onClick={closeMenu}
+            >
+              Socks
+            </Link>
+            <Link
+              className={navLinkClass}
+              href="/accessories/shuttlecocks"
+              onClick={closeMenu}
+            >
+              Shuttlecocks
+            </Link>
+            <Link
+              className={navLinkClass}
+              href="/accessories/towels"
+              onClick={closeMenu}
+            >
+              Towels
+            </Link>
+            <Link
+              className={navLinkClass}
+              href="/accessories/wristbands"
+              onClick={closeMenu}
+            >
+              Wristbands
+            </Link>
             <Link
               className={navLinkClass}
               href="/new-arrivals"
@@ -236,6 +311,15 @@ export function Navbar() {
               onClick={closeMenu}
             >
               Best Sellers
+            </Link>
+            <Link className={navLinkClass} href="/wishlist" onClick={closeMenu}>
+              Wishlist
+            </Link>
+            <Link className={navLinkClass} href="/login" onClick={closeMenu}>
+              Account
+            </Link>
+            <Link className={navLinkClass} href="/cart" onClick={closeMenu}>
+              Shopping Cart
             </Link>
             <Link className={navLinkClass} href="/about" onClick={closeMenu}>
               About Us
