@@ -6,7 +6,7 @@ export default function RootRouteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen overflow-hidden bg-[#f6f7f2] text-[#18201b]">
       <Navbar />
-      <main>{children}</main>
+      <main className="pt-28">{children}</main>
       <Footer />
     </div>
   );

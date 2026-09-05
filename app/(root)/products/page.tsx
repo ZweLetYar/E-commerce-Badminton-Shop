@@ -1,7 +1,5 @@
-import React from "react";
+import { redirect } from "next/navigation";
 
-function page() {
-  return <div>page</div>;
+export default function ProductsPage() {
+  redirect("/shop");
 }
-
-export default page;

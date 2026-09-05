@@ -28,9 +28,9 @@ export function Footer() {
           <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[#18201b]">
             Explore
           </p>
-          <Link href="/products">All equipment</Link>
-          <Link href="/categories">Collections</Link>
-          <Link href="/about">Our story</Link>
+          <Link href="/shop">All equipment</Link>
+          <Link href="/accessories">Accessories</Link>
+          <Link href="/about">About Us</Link>
         </div>
         <div className="flex flex-col gap-3 text-xs text-[#68736b]">
           <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[#18201b]">

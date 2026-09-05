@@ -41,7 +41,7 @@ const categoryRows: {
 
 export function CategorySection() {
   return (
-    <section className="mx-auto max-w-[1280px] px-6 py-24 md:px-12 md:py-32">
+    <section className="mx-auto max-w-[1280px] px-6 py-24 md:px-12 md:py-10">
       <div className="mb-12 flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-end">
         <div>
           <p className="mb-6 text-[10px] font-bold uppercase tracking-[.2em] text-[#6d891d]">
@@ -55,12 +55,12 @@ export function CategorySection() {
             </em>
           </h2>
         </div>
-        <Link
+        {/* <Link
           className="border-b border-[#b6d63f] pb-2 text-[11px] uppercase text-[#6d891d]"
-          href="/products"
+          href="/shop"
         >
           View all equipment <span className="ml-5 text-lg">→</span>
-        </Link>
+        </Link> */}
       </div>
       <div className="space-y-20">
         {categoryRows.map((category) => (

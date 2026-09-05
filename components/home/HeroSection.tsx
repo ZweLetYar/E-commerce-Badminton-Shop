@@ -52,7 +52,7 @@ export function HeroSection() {
         </p>
         <Link
           className="group inline-flex items-center gap-5 rounded-full border border-[#b6d63f] bg-[#eef3d8] py-2 pl-5 pr-2 text-[11px] font-bold uppercase tracking-[0.08em] text-[#536b18] shadow-[0_8px_24px_rgba(86,111,24,0.12)] backdrop-blur-md transition hover:border-[#9fbe2e] hover:bg-[#b6d63f] hover:text-[#17200f]"
-          href="/products"
+          href="/shop"
         >
           <span className="transition-colors group-hover:text-[#17200f]">
             Shop the collection
