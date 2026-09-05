@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #101111;
-  --foreground: #f0f0ea;
-  --muted: #94968f;
-  --line: #2a2d2b;
-  --lime: #d5ed55;
-  --panel: #171918;
+  --background: #f6f7f2;
+  --foreground: #18201b;
+  --muted: #68736b;
+  --line: #d9dfd6;
+  --lime: #b6d63f;
+  --panel: #e9efe5;
 }
 
 @theme inline {
@@ -36,7 +36,7 @@ a {
 }
 .announcement {
   background: var(--lime);
-  color: #161911;
+  color: #17200f;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.09em;
@@ -78,7 +78,7 @@ a {
 .main-nav a,
 .icon-link,
 .cart-link {
-  color: #c5c7c0;
+  color: #536057;
   font-size: 13px;
   transition: color 0.2s ease;
 }
@@ -153,7 +153,7 @@ h2 em {
 .primary-button {
   align-items: center;
   background: var(--lime);
-  color: #151812;
+  color: #17200f;
   display: inline-flex;
   font-size: 12px;
   font-weight: 700;
@@ -165,7 +165,7 @@ h2 em {
   font-size: 19px;
 }
 .hero-art {
-  background: #20251e;
+  background: #dfe9d7;
   min-height: 610px;
   overflow: hidden;
   position: relative;
@@ -199,7 +199,7 @@ h2 em {
   position: absolute;
 }
 .art-racket {
-  border: 8px solid #dfe9c2;
+  border: 8px solid #64735f;
   border-radius: 50%;
   height: 275px;
   left: 43%;
@@ -209,7 +209,7 @@ h2 em {
   width: 275px;
 }
 .art-racket::after {
-  background: #dfe9c2;
+  background: #64735f;
   content: "";
   height: 315px;
   left: 49%;
@@ -376,7 +376,7 @@ h2 {
   max-width: 260px;
 }
 .email-row {
-  border-bottom: 1px solid #565a51;
+  border-bottom: 1px solid #aab6aa;
   display: flex;
   margin-top: 23px;
   max-width: 300px;
