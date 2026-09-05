@@ -23,21 +23,21 @@ export function CategoryPageShell({
     <main className="mx-auto max-w-[1280px] px-6 py-20 md:px-12 md:py-28">
       {backHref && (
         <Link
-          className="text-xs uppercase tracking-[.14em] text-white/40 transition hover:text-[#d8f36a]"
+          className="text-xs uppercase tracking-[.14em] text-[#87938a] transition hover:text-[#6d891d]"
           href={backHref}
         >
           ← {backLabel ?? "Back"}
         </Link>
       )}
       <div className={backHref ? "mt-14" : ""}>
-        <p className="mb-6 text-[10px] font-bold uppercase tracking-[.2em] text-[#d8f36a]">
+        <p className="mb-6 text-[10px] font-bold uppercase tracking-[.2em] text-[#6d891d]">
           {eyebrow}
         </p>
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <h1 className="font-display text-6xl font-medium tracking-[-.07em] sm:text-8xl">
             {name}
           </h1>
-          <p className="max-w-sm text-sm leading-6 text-white/45">
+          <p className="max-w-sm text-sm leading-6 text-[#68736b]">
             {description}
           </p>
         </div>

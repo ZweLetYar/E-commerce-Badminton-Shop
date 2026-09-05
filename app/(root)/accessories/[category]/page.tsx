@@ -68,7 +68,7 @@ export default async function AccessoryCategoryPage({
     return (
       <main className="mx-auto max-w-3xl px-6 py-32 text-center">
         <h1 className="font-display text-5xl">Category not found</h1>
-        <Link className="mt-8 inline-block text-[#d8f36a]" href="/accessories">
+        <Link className="mt-8 inline-block text-[#6d891d]" href="/accessories">
           Back to accessories
         </Link>
       </main>
